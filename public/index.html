@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calorie counter</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./boldlight.css">
+  </head>
+  <body>
+    <h1>Calorie Counter</h1>
+    <div class="divider"></div>
+    <br>
+    <form class="input">
+      <input type="text" required="required" placeholder="Meal input" id="new-meal" maxlength="22"/>
+      <input type="number" required="required" placeholder="kCal" id="new-calories" min="0"/>
+      <input type="date" required="required" id="new-date"/>
+      <input type="button" id="add" value="OK"/>
+    </form>
+    <br>
+    <div class="divider"></div>
+    <br>
+    <div class="filter">
+        <span class="summary">Daily energy:</span>
+        <span class="summary"></span>
+        <span class="summary" id="summary">0 kcal</span>
+    </div>
+    <br>
+    <div class="dropdown">
+        <button class="dropbtn">Pick a Date</button>
+        <br>
+        <br>
+        <div id="myDropdown" class="dropdown-content">
+        </div>
+    <div/>
+    <br>
+    <div class="divider"></div>
+    <br>
+    <div class="items-container"></div>
+    <br>
+    <div class="divider"></div>
+    <script src="humane.min.js"></script>
+    <script src="./animatedCounter.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+body {
+    color: #666;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 600px;
+}
+
+#add {
+    border-radius: 5px;
+}
+
+.dropbtn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color: #3f60ba;
+    font-weight: bold;
+    font-size: 150%;
+    padding: 5px 20px;
+    text-shadow: 1px -1px 2px rgba(150, 150, 150, 1);
+    outline: none;
+}
+
+#myDropdown {
+    max-height: 130px;
+    overflow-y:scroll;
+    width: 580px;
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #ddd;
+    -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown {
+    display: inline-block;
+    text-align: center; 
+}
+
+placeholder {
+    text-align: center;
+}
+
+.dropdown-content {
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+    min-width: 160px;
+    text-align: center;
+}
+
+.dropdown-content div {
+    color: #3f60ba;
+    display: block;
+    margin-top: 3px;
+    padding: 4px 16px;
+    text-decoration: none;
+}
+
+.dropdown-content div:hover {
+    background-color: #ddd;
+}
+
+.show {display:block;}
+
+h1, .filter{
+    text-align: center;
+}
+
+h1 {
+    text-shadow: 1px -2px 2px rgba(150, 150, 150, 1);
+}
+
+form {
+    text-align: center;
+}
+
+.filter {
+    text-align: center;
+}
+
+.divider {
+    background: linear-gradient(to right, #fff 0%, #bbb 50%, #fff 100%);
+    height: 4px;
+    margin: 10 auto;
+}
+
+span {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+}
+
+.summary:nth-child(2) {
+   width: 30px; 
+}
+
+span:nth-child(1) {
+    text-align: right;
+    width: 250px;
+}
+
+span:nth-child(3) {
+    text-align: left;
+    width: 250px;
+}
+
+
+
+.items-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+input:hover, #add:hover {
+    background-color: white;
+    box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+input {
+    border: none;
+    line-height: 20px;
+    outline: none;
+    padding: 2 0;
+    text-align: center;
+}
+
+
+.summary {
+    color: #3f60ba;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 150%;
+    text-shadow: 1px -1px 2px rgba(150, 150, 150, 1);
+    
+}
+
+.item-row {
+    font-style: italic;
+}
+
+.item-row:nth-child(2n) {
+    background-color: #ddd;
+}
