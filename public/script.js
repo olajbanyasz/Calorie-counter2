@@ -18,12 +18,13 @@ addNewDate.valueAsDate = new Date();
 addButton.addEventListener('click', callAddNewItem);
 
 function createMenuContent(datesSet) {
-    clearItemsFromDisplay(document.getElementById("myDropdown"));
+    clearItemsFromDisplay(document.getElementById('myDropdown'));
     Array.from(datesSet).forEach(function(date) {
         var newDateDiv = document.createElement('div');
-        document.getElementById("myDropdown").appendChild(newDateDiv);
+        document.getElementById('myDropdown').appendChild(newDateDiv);
         newDateDiv.innerText = date;
         newDateDiv.setAttribute('id', date);
+        colorDatebySum(date, newDateDiv);
         newDateDiv.classList.add('dropdown-content');
         newDateDiv.addEventListener('click', mealFilter);
     });
@@ -31,14 +32,13 @@ function createMenuContent(datesSet) {
 
 function openDatePicker() {
     createMenuContent(enabledDates);
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById('myDropdown').classList.toggle('show');
 }
 
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
+    var dropdowns = document.getElementsByClassName('dropdown-content');
+    for (var i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
@@ -79,6 +79,11 @@ function dateComparator(item) {
   return false;
 }
 
+function colorDatebySum(date, obj) {
+    var dailySum = itemsArray.reduce((sum,item)=>item.date === date?sum += item.calories:sum+0, 0);
+    colorSelector(dailySum, obj);
+}
+
 function filterArray() {
   itemsArray.forEach(function(item) {
     if(dateComparator(item)) {
@@ -99,6 +104,7 @@ function clearInputFields() {
   addNewCalories.value = '';
   addNewDate.valueAsDate = new Date();
   summary.innerText = 0 + ' kcal';
+  summary.style.color = '#666';
 }
 
 function isRequestOK(request) {
