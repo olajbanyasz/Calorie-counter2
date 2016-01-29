@@ -71,7 +71,7 @@ function mealFilter() {
   clearDatas();
   filterArray();
   displayItems(selectedItemsArray);
-  animatedCounter('summary', 0, caloriesSum, 100);
+  animatedCounter('summary', 0, caloriesSum, 150);
 }
 
 function dateComparator(item) {
